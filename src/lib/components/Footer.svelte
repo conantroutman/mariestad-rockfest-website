@@ -47,6 +47,7 @@
 	footer {
 		background-color: black;
 		color: white;
+		padding-top: 4rem;
 	}
 
 	.grid {
