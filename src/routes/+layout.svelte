@@ -10,6 +10,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<link rel="stylesheet" href="https://use.typekit.net/pgv6ukm.css" />
+	<title>Mariestad Rockfest</title>
 </svelte:head>
 
 <Header />
