@@ -16,7 +16,7 @@
 		'Spacedrifter',
 		'Vänervind',
 		'When',
-		'Jonny Stålarz',
+		'Johnny Stålarz',
 		'Dråpslag',
 		'Projekt Kirre',
 		'Thermality',
@@ -27,10 +27,6 @@
 		'TBA'
 	];
 </script>
-
-<svelte:head>
-	<meta name="robots" content="noindex, nofollow" />
-</svelte:head>
 
 <div class="hero">
 	<div class="hero-logo-container">
