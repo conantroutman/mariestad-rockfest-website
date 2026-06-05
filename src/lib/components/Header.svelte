@@ -14,7 +14,7 @@
 		align-items: center;
 		color: white;
 		background-color: black;
-		padding: 1rem 2rem;
+		padding: 1rem var(--page-gutter);
 		position: sticky;
 		z-index: 10;
 		top: 0;

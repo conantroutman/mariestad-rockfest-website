@@ -12,6 +12,20 @@
 	--font-scale-800: 3rem;
 	--font-scale-900: 4rem;
 	--font-scale-1000: 5rem;
+
+	--page-gutter: 3rem;
+}
+
+@media (max-width: 768px) {
+	:root {
+		--page-gutter: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--page-gutter: 1rem;
+	}
 }
 
 /* Box sizing rules */

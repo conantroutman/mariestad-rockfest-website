@@ -39,13 +39,13 @@
 				</ul>
 			</div>
 		</div>
+		<div class="copyright">© Mariestad Rockfest 2026</div>
 	</Container>
 </footer>
 
 <style>
 	footer {
 		background-color: black;
-		padding: 2rem 0;
 		color: white;
 	}
 
@@ -78,5 +78,16 @@
 
 	h3 {
 		margin-bottom: 0.5rem;
+	}
+
+	address {
+		font-weight: 300;
+	}
+
+	.copyright {
+		text-align: center;
+		font-weight: 200;
+		font-size: 0.75rem;
+		padding: 1rem 0;
 	}
 </style>

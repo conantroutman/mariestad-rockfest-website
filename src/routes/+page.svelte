@@ -8,6 +8,7 @@
 	import HeroImage from '$lib/assets/hero.png?enhanced';
 	import LogoImage from '$lib/assets/logo.png?enhanced';
 	import { DATE, TICKETS_URL } from '$lib/constants';
+	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
 
 	const bands = [
 		'Secret Gallery',
@@ -80,6 +81,7 @@
 			<LogoStudieframjandet />
 			<LogoRenta />
 			<LogoVGR />
+			<LogoSkyltotryck />
 		</div>
 	</Container>
 </section>
@@ -132,7 +134,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 3rem;
-		padding: 3rem;
+		padding: var(--page-gutter);
 	}
 
 	.hero-logo {
