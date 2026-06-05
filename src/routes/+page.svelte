@@ -120,6 +120,7 @@
 	.hero-image {
 		object-fit: cover;
 		height: 100%;
+		width: 100%;
 	}
 
 	.hero-logo-container {
