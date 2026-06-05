@@ -5,7 +5,7 @@
 	viewBox="0 0 2245.000000 401.000000"
 	preserveAspectRatio="xMidYMid meet"
 >
-	<title>Västragötalandsregionen</title>
+	<title>Västra Götalandsregionen</title>
 	<g
 		transform="translate(0.000000,401.000000) scale(0.100000,-0.100000)"
 		fill="currentColor"
