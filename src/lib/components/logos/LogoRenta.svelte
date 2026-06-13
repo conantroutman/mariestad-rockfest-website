@@ -5,7 +5,7 @@
 	style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 	viewBox="0 0 1193 354"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	height="2rem"
+	height="1.8rem"
 >
 	<title>Renta</title>
 	<defs>

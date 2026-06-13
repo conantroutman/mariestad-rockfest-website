@@ -9,6 +9,7 @@
 	import LogoImage from '$lib/assets/logo.png?enhanced';
 	import { DATE, TICKETS_URL } from '$lib/constants';
 	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
+	import LogoMariestadKommun from '$lib/components/logos/LogoMariestadKommun.svelte';
 
 	const bands = [
 		'Secret Gallery',
@@ -75,8 +76,9 @@
 		<div class="logos">
 			<LogoKarlsholme />
 			<LogoStudieframjandet />
-			<LogoRenta />
+			<LogoMariestadKommun />
 			<LogoVGR />
+			<LogoRenta />
 			<LogoSkyltotryck />
 		</div>
 	</Container>
@@ -160,6 +162,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 		flex-wrap: wrap;
 		gap: 2rem;
 		color: white;

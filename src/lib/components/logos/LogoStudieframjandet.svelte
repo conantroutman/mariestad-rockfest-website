@@ -1,4 +1,4 @@
-<svg version="1.1" id="svg1" height="2rem" viewBox="0 0 385.29333 225.28">
+<svg version="1.1" id="svg1" height="2.2rem" viewBox="0 0 385.29333 225.28">
 	<title>Studiefrämjandet</title>
 	<defs id="defs1" />
 	<g id="g1">
