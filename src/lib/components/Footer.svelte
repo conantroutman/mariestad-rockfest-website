@@ -27,7 +27,7 @@
 				<h3>Följ oss på sociala medier</h3>
 				<ul class="socials">
 					<li>
-						<a href="https://instagram.com/mariestadrockfest" title="Instagram">
+						<a href="https://instagram.com/mariestad_rockfest" title="Instagram">
 							<LogoInstagram />
 						</a>
 					</li>
