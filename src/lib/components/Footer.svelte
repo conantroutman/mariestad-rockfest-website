@@ -31,12 +31,22 @@
 				<h4>Följ oss på sociala medier</h4>
 				<ul class="socials">
 					<li>
-						<a href="https://instagram.com/mariestad_rockfest" title="Instagram">
+						<a
+							href="https://instagram.com/mariestad_rockfest"
+							target="_blank"
+							rel="noreferrer"
+							title="Instagram"
+						>
 							<LogoInstagram />
 						</a>
 					</li>
 					<li>
-						<a href="https://www.facebook.com/profile.php?id=61575453290236" title="Facebook">
+						<a
+							href="https://www.facebook.com/mariestadrockfest"
+							target="_blank"
+							rel="noreferrer"
+							title="Facebook"
+						>
 							<LogoFacebook />
 						</a>
 					</li>
