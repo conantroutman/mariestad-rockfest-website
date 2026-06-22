@@ -11,23 +11,30 @@
 	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
 	import LogoMariestadKommun from '$lib/components/logos/LogoMariestadKommun.svelte';
 	import PageHero from '$lib/components/PageHero.svelte';
+	import Countdown from '$lib/components/Countdown.svelte';
 
 	const bands = [
-		'Secret Gallery',
 		'Badmor',
-		'Spacedrifter',
-		'Vänervind',
-		'When',
-		'Johnny Stålarz',
+		'Browsing Collection',
 		'Dråpslag',
-		'Projekt Kirre',
-		'Thermality',
+		'Johnny Stålarz',
 		'Kaliber',
-		'Steelflight',
+		'Projekt Kirre',
 		'Rymdsallad',
-		'Ättestupan',
-		'TBA'
+		'Secret Gallery',
+		'Spacedrifter',
+		'Steelflight',
+		'Thermality',
+		'When',
+		'Vänervind',
+		'Ättestupan'
 	];
+
+	const date = new Date('2026-09-06:15:30:00');
+
+	const TIME_24_HOURS = 86400000;
+
+	const showCountdown = Date.now() > date.getMilliseconds() + TIME_24_HOURS;
 </script>
 
 <svelte:head>
@@ -41,6 +48,9 @@
 			{DATE.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' })}
 		</time>
 	</div>
+	{#if showCountdown}
+		<Countdown {date} />
+	{/if}
 	<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
 </PageHero>
 
