@@ -10,6 +10,7 @@
 	import { DATE, TICKETS_URL } from '$lib/constants';
 	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
 	import LogoMariestadKommun from '$lib/components/logos/LogoMariestadKommun.svelte';
+	import PageHero from '$lib/components/PageHero.svelte';
 
 	const bands = [
 		'Secret Gallery',
@@ -29,21 +30,23 @@
 	];
 </script>
 
-<div class="hero">
-	<div class="hero-logo-container">
-		<div>
-			<enhanced:img src={LogoImage} alt="Mariestad Rockfest" class="hero-logo" />
-			<time class="hero-date" datetime={DATE.toISOString()}>
-				{DATE.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' })}
-			</time>
-		</div>
-		<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+<svelte:head>
+	<title>Mariestad Rockfest</title>
+</svelte:head>
+
+<PageHero imageSrc={HeroImage} imageAlt="Ett band spelar på Jubileumsteatern">
+	<div>
+		<enhanced:img src={LogoImage} alt="Mariestad Rockfest" class="hero-logo" />
+		<time class="hero-date" datetime={DATE.toISOString()}>
+			{DATE.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' })}
+		</time>
 	</div>
-	<enhanced:img src={HeroImage} alt="Ett band spelar på Jubileumsteatern" class="hero-image" />
-</div>
+	<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+</PageHero>
 
 <section>
 	<Container>
+		<h1 class="heading-1">Välkommen till Mariestad Rockfest</h1>
 		<div class="info">
 			<p>
 				För andra året arrangerar Folkparksföreningen i Mariestad en gigantisk musikfest där vi
@@ -61,7 +64,7 @@
 
 <section>
 	<Container>
-		<h2>Klara band</h2>
+		<h2 class="heading-2">Klara band</h2>
 		<ul class="bands">
 			{#each bands as band (band)}
 				<li>{band}</li>
@@ -72,7 +75,7 @@
 
 <section>
 	<Container>
-		<h2>Våra partners</h2>
+		<h2 class="heading-2">Våra partners</h2>
 		<div class="logos">
 			<LogoKarlsholme />
 			<LogoStudieframjandet />
@@ -85,22 +88,6 @@
 </section>
 
 <style>
-	h2 {
-		font-family: casserole-flare;
-		text-transform: uppercase;
-		letter-spacing: 10%;
-	}
-
-	h2 {
-		font-size: 4rem;
-	}
-
-	@media (max-width: 680px) {
-		h2 {
-			font-size: 3rem;
-		}
-	}
-
 	section {
 		text-align: center;
 		padding: 4rem 0;
@@ -115,24 +102,6 @@
 
 	:global(.hero > picture) {
 		height: 100%;
-	}
-
-	.hero-image {
-		object-fit: cover;
-		height: 100%;
-		width: 100%;
-	}
-
-	.hero-logo-container {
-		position: absolute;
-		inset: 0;
-		z-index: 2;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 3rem;
-		padding: var(--page-gutter);
 	}
 
 	.hero-logo {

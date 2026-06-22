@@ -2,13 +2,17 @@
 	import Container from './Container.svelte';
 	import LogoFacebook from './logos/LogoFacebook.svelte';
 	import LogoInstagram from './logos/LogoInstagram.svelte';
+	import Logo from '$lib/assets/logo.png';
 </script>
 
 <footer>
 	<Container>
+		<div class="logo">
+			<enhanced:img src={Logo} alt="Mariestad Rockfest" />
+		</div>
 		<div class="grid">
 			<div>
-				<h3>Festivalområdet</h3>
+				<h4>Festivalområdet</h4>
 				<address>
 					<div>Karlsholme Folkets Park</div>
 					<div>542 30 Mariestad</div>
@@ -16,7 +20,7 @@
 				</address>
 			</div>
 			<div>
-				<h3>Kontaktuppgifter</h3>
+				<h4>Kontaktuppgifter</h4>
 				<address>
 					<div>
 						E-post: <a href="mailto:mariestadrockfest@gmail.com">mariestadrockfest@gmail.com</a>
@@ -24,7 +28,7 @@
 				</address>
 			</div>
 			<div>
-				<h3>Följ oss på sociala medier</h3>
+				<h4>Följ oss på sociala medier</h4>
 				<ul class="socials">
 					<li>
 						<a href="https://instagram.com/mariestad_rockfest" title="Instagram">
@@ -53,7 +57,7 @@
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		row-gap: 1.5rem;
+		gap: 1.5rem;
 	}
 
 	@media (max-width: 680px) {
@@ -77,7 +81,7 @@
 		opacity: 0.75;
 	}
 
-	h3 {
+	h4 {
 		margin-bottom: 0.5rem;
 	}
 
@@ -90,5 +94,10 @@
 		font-weight: 200;
 		font-size: 0.75rem;
 		padding: 1rem 0;
+	}
+
+	.logo {
+		max-width: 400px;
+		margin: 0 auto 2rem auto;
 	}
 </style>

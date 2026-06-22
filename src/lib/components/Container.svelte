@@ -12,6 +12,7 @@
 		max-width: 1440px;
 		margin: 0 auto;
 		padding: 0 var(--page-gutter);
+		container-name: container;
 		container-type: inline-size;
 	}
 </style>

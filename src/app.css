@@ -14,6 +14,12 @@
 	--font-scale-1000: 5rem;
 
 	--page-gutter: 3rem;
+
+	--header-height: 68px;
+
+	--font-family-casserole: casserole-flare;
+	--font-family-avant-garde:
+		itc-avant-garde-gothic-pro, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -132,4 +138,37 @@ textarea:not([rows]) {
 
 address {
 	font-style: inherit;
+}
+
+/* Custom */
+body {
+	color: white;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-family-casserole);
+	text-transform: uppercase;
+	letter-spacing: 10%;
+}
+
+.heading-1 {
+	font-size: clamp(3rem, 3cqw, 4rem);
+}
+
+.heading-2 {
+	font-size: clamp(2rem, 3cqw, 3rem);
+}
+
+.heading-3 {
+	font-size: clamp(1.75rem, 3cqw, 2.5rem);
+}
+
+.heading-4 {
+	font-size: clamp(1.5rem, 3cqw, 2rem);
+}
+
+.heading-5 {
+	font-size: clamp(1rem, 3cqw, 1.5rem);
 }
