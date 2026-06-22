@@ -2,7 +2,7 @@
 	import Container from './Container.svelte';
 	import LogoFacebook from './logos/LogoFacebook.svelte';
 	import LogoInstagram from './logos/LogoInstagram.svelte';
-	import Logo from '$lib/assets/logo.png';
+	import Logo from '$lib/assets/logo.png?enhanced';
 </script>
 
 <footer>
@@ -109,5 +109,10 @@
 	.logo {
 		max-width: 400px;
 		margin: 0 auto 2rem auto;
+	}
+
+	.logo img {
+		width: 100%;
+		height: 100%;
 	}
 </style>
