@@ -8,6 +8,8 @@
 
 	let { date }: Props = $props();
 
+	let isMounted = $state(false);
+
 	let timeLeft = $state({ days: 0, hours: 0, minutes: 0, seconds: 0, totalSeconds: 0 });
 
 	let interval: ReturnType<typeof setInterval>;
@@ -28,6 +30,7 @@
 	onMount(() => {
 		calculateTime();
 		interval = setInterval(calculateTime, 1000);
+		isMounted = true;
 	});
 
 	onDestroy(() => {
@@ -35,34 +38,36 @@
 	});
 </script>
 
-{#if timeLeft.totalSeconds > 0}
-	<div class="container">
-		<div class="segment">
-			<div class="value">{timeLeft.days}</div>
-			<div class="label">Dagar</div>
-		</div>
-		<div class="segment">
-			<div class="value">
-				{timeLeft.hours}
+{#if isMounted}
+	{#if timeLeft.totalSeconds > 0}
+		<div class="container">
+			<div class="segment">
+				<div class="value">{timeLeft.days}</div>
+				<div class="label">Dagar</div>
 			</div>
-			<div class="label">Timmar</div>
+			<div class="segment">
+				<div class="value">
+					{timeLeft.hours}
+				</div>
+				<div class="label">Timmar</div>
+			</div>
+			<div class="segment">
+				<div class="value">{timeLeft.minutes}</div>
+				<div class="label">Minuter</div>
+			</div>
+			<div class="segment">
+				<div class="value">{timeLeft.seconds}</div>
+				<div class="label">Sekunder</div>
+			</div>
 		</div>
-		<div class="segment">
-			<div class="value">{timeLeft.minutes}</div>
-			<div class="label">Minuter</div>
+	{:else}
+		<div class="countdown-finished">
+			<div class="confetti">
+				<Confetti x={[-3, 3]} y={[0.25, 0.5]} />
+			</div>
+			<div>Festivalen har börjat!</div>
 		</div>
-		<div class="segment">
-			<div class="value">{timeLeft.seconds}</div>
-			<div class="label">Sekunder</div>
-		</div>
-	</div>
-{:else}
-	<div class="countdown-finished">
-		<div class="confetti">
-			<Confetti x={[-3, 3]} y={[0.25, 0.5]} />
-		</div>
-		<div>Festivalen har börjat!</div>
-	</div>
+	{/if}
 {/if}
 
 <style>
