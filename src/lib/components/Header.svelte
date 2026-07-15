@@ -1,14 +1,31 @@
 <script lang="ts">
 	import { TICKETS_URL } from '$lib/constants';
+
+	const navLinks = [
+		{
+			href: '/lineup',
+			label: 'Lineup'
+		},
+		{
+			href: '/info',
+			label: 'Info'
+		}
+	];
 </script>
 
 <header>
 	<h1 class="wordmark"><a href="/">Mariestad Rockfest</a></h1>
-	<a href={TICKETS_URL} target="_blank" class="tickets">Biljetter</a>
+	<nav>
+		{#each navLinks as link (link.href)}
+			<a href={link.href} class="link">{link.label}</a>
+		{/each}
+		<a href={TICKETS_URL} target="_blank" class="tickets">Biljetter</a>
+	</nav>
 </header>
 
 <style>
 	header {
+		height: var(--header-height);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -22,6 +39,12 @@
 		left: 0;
 	}
 
+	nav {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
 	.wordmark {
 		font-family: casserole-flare;
 		text-transform: uppercase;
@@ -31,6 +54,12 @@
 
 	.wordmark a {
 		text-decoration: none;
+	}
+
+	.link {
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 5%;
 	}
 
 	.tickets {
