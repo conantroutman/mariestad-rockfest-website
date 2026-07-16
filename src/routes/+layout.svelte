@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.png';
+	import favicon from '$lib/assets/favicon.ico';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { onMount } from 'svelte';
