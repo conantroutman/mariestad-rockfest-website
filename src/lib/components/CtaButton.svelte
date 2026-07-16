@@ -27,6 +27,7 @@
 		transition-timing-function: ease;
 		text-decoration: none;
 		backdrop-filter: blur(10px);
+		font-weight: 500;
 	}
 
 	a:hover {

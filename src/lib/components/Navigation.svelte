@@ -155,7 +155,7 @@
 	.socials {
 		display: flex;
 		gap: 2rem;
-		height: 4rem;
+		height: 3rem;
 	}
 
 	@keyframes slide-in {
