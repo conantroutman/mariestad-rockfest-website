@@ -46,7 +46,7 @@
 		{#each navLinks as link (link.href)}
 			<a href={link.href} class="link" onclick={() => (open = !open)}>{link.label}</a>
 		{/each}
-		<a href={TICKETS_URL} target="_blank" class="tickets">Biljetter</a>
+		<a href={TICKETS_URL} target="_blank" class="link">Biljetter</a>
 		<div class="socials">
 			<a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" title="Instagram">
 				<LogoInstagram />
@@ -116,11 +116,30 @@
 		opacity: 0;
 	}
 
-	nav a {
+	.link {
 		font-size: 4rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 500;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.link::after {
+		content: '';
+		width: 0;
+		opacity: 0;
+		border-bottom: 2px solid white;
+		transition:
+			width 200ms ease-in-out,
+			opacity 200ms ease-in-out;
+	}
+
+	.link:hover::after {
+		width: 100%;
+		opacity: 1;
 	}
 
 	@container (width < 600px) {
@@ -128,7 +147,7 @@
 			gap: 1rem;
 		}
 
-		nav a {
+		.link {
 			font-size: 3rem;
 		}
 	}
@@ -156,6 +175,16 @@
 
 		to {
 			transform: translateX(100%);
+		}
+	}
+
+	@keyframes test {
+		from {
+			width: 0;
+		}
+
+		to {
+			width: 100%;
 		}
 	}
 </style>
