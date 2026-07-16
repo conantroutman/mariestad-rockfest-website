@@ -8,7 +8,13 @@
 
 <section>
 	<Container size="sm">
-		<h1>Information</h1>
+		<h1 class="heading-1">Information</h1>
 		<Faq items={data.questions} />
 	</Container>
 </section>
+
+<style>
+	h1 {
+		padding: 2rem 0;
+	}
+</style>

@@ -71,8 +71,7 @@
 	}
 
 	.item {
-		border-bottom: 1px solid white;
-		padding: 0 0.5rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 	}
 
 	.trigger {
@@ -81,7 +80,7 @@
 		user-select: none;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem 0;
+		padding: 1.5rem 0;
 		background: none;
 		color: white;
 		border: none;

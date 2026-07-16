@@ -6,12 +6,12 @@
 	import LogoStudieframjandet from '$lib/components/logos/LogoStudieframjandet.svelte';
 	import LogoVGR from '$lib/components/logos/LogoVGR.svelte';
 	import HeroImage from '$lib/assets/hero.png?enhanced';
-	import LogoImage from '$lib/assets/logo.png?enhanced';
 	import { DATE, TICKETS_URL } from '$lib/constants';
 	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
 	import LogoMariestadKommun from '$lib/components/logos/LogoMariestadKommun.svelte';
 	import PageHero from '$lib/components/PageHero.svelte';
 	import Countdown from '$lib/components/Countdown.svelte';
+	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
 
 	const bands = [
 		'Badmor',
@@ -43,7 +43,9 @@
 
 <PageHero imageSrc={HeroImage} imageAlt="Ett band spelar på Jubileumsteatern">
 	<div>
-		<enhanced:img src={LogoImage} alt="Mariestad Rockfest" class="hero-logo" />
+		<div class="hero-logo">
+			<MariestadRockfestLogo />
+		</div>
 		<time class="hero-date" datetime={DATE.toISOString()}>
 			{DATE.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' })}
 		</time>
@@ -51,7 +53,9 @@
 	{#if showCountdown}
 		<Countdown {date} />
 	{/if}
-	<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+	<div class="cta">
+		<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+	</div>
 </PageHero>
 
 <section>
@@ -103,21 +107,12 @@
 		padding: 4rem 0;
 	}
 
-	.hero {
-		width: 100%;
-		height: 600px;
-		position: relative;
-		overflow: hidden;
-	}
-
 	:global(.hero > picture) {
 		height: 100%;
 	}
 
 	.hero-logo {
-		object-fit: contain;
-		height: fit-content;
-		width: 600px;
+		max-width: 600px;
 	}
 
 	.hero-date {
@@ -129,6 +124,11 @@
 		display: block;
 		letter-spacing: 20%;
 		line-height: 1;
+		margin-top: 0.5rem;
+	}
+
+	.cta {
+		margin-top: 3rem;
 	}
 
 	@media (max-width: 680px) {

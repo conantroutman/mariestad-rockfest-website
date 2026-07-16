@@ -23,9 +23,6 @@
 	h1 {
 		text-align: center;
 		margin: auto;
-	}
-
-	.lineup {
-		margin-top: 4rem;
+		padding: 2rem 0;
 	}
 </style>

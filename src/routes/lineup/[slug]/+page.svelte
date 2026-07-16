@@ -3,14 +3,16 @@
 	import SpotifyEmbed from '$lib/components/SpotifyEmbed.svelte';
 	import type { PageProps } from './$types';
 	import PageHero from '$lib/components/PageHero.svelte';
-	const imageModules = import.meta.glob(
+	import type { Picture } from '@sveltejs/enhanced-img';
+	const imageModules = import.meta.glob<Picture>(
 		'/src/lineup/images/*.{avif,AVIF,gif,GIF,heif,HEIF,jpeg,JPEG,jpg,JPG,png,PNG,tiff,TIFF,webp,WEBP}',
 		{
 			eager: true,
 			query: {
 				enhanced: true,
 				w: '1920'
-			}
+			},
+			import: 'default'
 		}
 	);
 
@@ -27,9 +29,10 @@
 
 {#if imageModule}
 	<PageHero
-		imageSrc={imageModule?.default}
+		imageSrc={imageModule}
 		imageAlt={data.artist.metadata.title}
 		imageOffset={data.artist.metadata.imageOffset}
+		variant="artist"
 	/>
 {/if}
 

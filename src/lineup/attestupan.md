@@ -1,7 +1,7 @@
 ---
 title: Ättestupan
 spotify: 'https://open.spotify.com/artist/3wlXiOPLm71MY6gwwocnGV?si=6ibcKmfPSyWAQwRCFLfr4g'
-imageOffset: '10%'
+imageOffset: '20%'
 published: true
 ---
 

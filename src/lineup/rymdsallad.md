@@ -1,5 +1,6 @@
 ---
 title: Rymdsallad
+imageOffset: '10%'
 published: true
 ---
 

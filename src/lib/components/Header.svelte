@@ -1,26 +1,11 @@
 <script lang="ts">
-	import { TICKETS_URL } from '$lib/constants';
-
-	const navLinks = [
-		{
-			href: '/lineup',
-			label: 'Lineup'
-		},
-		{
-			href: '/info',
-			label: 'Info'
-		}
-	];
+	import MariestadRockfestLogo from './MariestadRockfestLogo.svelte';
+	import Navigation from './Navigation.svelte';
 </script>
 
 <header>
-	<h1 class="wordmark"><a href="/">Mariestad Rockfest</a></h1>
-	<nav>
-		{#each navLinks as link (link.href)}
-			<a href={link.href} class="link">{link.label}</a>
-		{/each}
-		<a href={TICKETS_URL} target="_blank" class="tickets">Biljetter</a>
-	</nav>
+	<a href="/" class="logo" aria-label="Home"><MariestadRockfestLogo /></a>
+	<Navigation />
 </header>
 
 <style>
@@ -39,27 +24,9 @@
 		left: 0;
 	}
 
-	nav {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-	}
-
-	.wordmark {
-		font-family: casserole-flare;
-		text-transform: uppercase;
-		letter-spacing: 5%;
-		text-wrap: nowrap;
-	}
-
-	.wordmark a {
-		text-decoration: none;
-	}
-
-	.link {
-		text-decoration: none;
-		text-transform: uppercase;
-		letter-spacing: 5%;
+	.logo {
+		color: white;
+		height: 2rem;
 	}
 
 	.tickets {

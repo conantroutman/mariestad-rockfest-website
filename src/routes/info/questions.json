@@ -17,7 +17,7 @@
 	},
 	{
 		"question": "Går det bra att betala med kort/Swish/kontanter på området?",
-		"answer": ""
+		"answer": "Kort och Swish går bra."
 	},
 	{
 		"question": "Vad får man lov att ta med sig in på området?",
@@ -37,7 +37,7 @@
 	},
 	{
 		"question": "Vilka band är med och spelar?",
-		"answer": "Under <a href='/lienup'>lineup</a> hittar du samtliga akter. Alla band presenteras löpande i separata inlägg."
+		"answer": "Under <a href='/lineup'>lineup</a> hittar du samtliga akter. Alla band presenteras löpande i separata inlägg."
 	},
 	{
 		"question": "Är det möjligt att ta del av samtliga band?",
