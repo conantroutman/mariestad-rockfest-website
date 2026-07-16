@@ -12,23 +12,9 @@
 	import PageHero from '$lib/components/PageHero.svelte';
 	import Countdown from '$lib/components/Countdown.svelte';
 	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
+	import type { PageProps } from './$types';
 
-	const bands = [
-		'Badmor',
-		'Browsing Collection',
-		'Dråpslag',
-		'Johnny Stålarz',
-		'Kaliber',
-		'Projekt Kirre',
-		'Rymdsallad',
-		'Secret Gallery',
-		'Spacedrifter',
-		'Steelflight',
-		'Thermality',
-		'When',
-		'Vänervind',
-		'Ättestupan'
-	];
+	const { data }: PageProps = $props();
 
 	const date = new Date('2026-09-06:15:30:00');
 
@@ -76,14 +62,15 @@
 	</Container>
 </section>
 
-<section>
+<section style:background-color="#0d0d0d">
 	<Container>
-		<h2 class="heading-2">Klara band</h2>
+		<h2 class="heading-2">Lineup</h2>
 		<ul class="bands">
-			{#each bands as band (band)}
-				<li>{band}</li>
+			{#each data.lineup as band (band)}
+				<li>{band.title}</li>
 			{/each}
 		</ul>
+		<CtaButton href="/lineup" target="_self">Läs mer om banden</CtaButton>
 	</Container>
 </section>
 
@@ -161,13 +148,15 @@
 	}
 
 	.bands {
-		color: white;
 		list-style: none;
 		padding: 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 0.5rem;
-		margin-top: 2rem;
+		margin: 3rem 0;
+		font-family: var(--font-family-casserole);
+		text-transform: uppercase;
+		font-size: 1.5rem;
 	}
 
 	@media (max-width: 680px) {

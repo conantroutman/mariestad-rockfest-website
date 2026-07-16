@@ -75,7 +75,11 @@
 	}
 
 	.socials a {
+		display: block;
 		transition: opacity 200ms ease;
+		height: 2rem;
+		width: 2rem;
+		line-height: 2rem;
 	}
 
 	.socials a:hover {
@@ -83,7 +87,8 @@
 	}
 
 	h4 {
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
 	}
 
 	address {

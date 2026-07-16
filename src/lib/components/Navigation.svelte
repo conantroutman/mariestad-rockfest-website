@@ -120,6 +120,7 @@
 		font-size: 4rem;
 		text-decoration: none;
 		text-transform: uppercase;
+		font-weight: 500;
 	}
 
 	@container (width < 600px) {
@@ -134,7 +135,8 @@
 
 	.socials {
 		display: flex;
-		gap: 1.5rem;
+		gap: 2rem;
+		height: 4rem;
 	}
 
 	@keyframes slide-in {

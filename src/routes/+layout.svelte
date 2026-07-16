@@ -2,9 +2,14 @@
 	import favicon from '$lib/assets/favicon.png';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import { onMount } from 'svelte';
 	import '../app.css';
 
 	let { children } = $props();
+
+	onMount(() => {
+		console.log('Created by John Söderberg');
+	});
 </script>
 
 <svelte:head>
@@ -23,12 +28,11 @@
 </main>
 <Footer />
 
-<style global>
+<style>
 	:global(body) {
 		background-color: black;
-	}
-
-	:global(h1, h2, h3, h4, h5, h6, p) {
-		color: white;
+		background-attachment: fixed;
+		background-size: contain;
+		position: relative;
 	}
 </style>
