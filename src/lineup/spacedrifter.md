@@ -1,6 +1,8 @@
 ---
 title: Spacedrifter
 spotify: 'https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=3gc2UPykT9O-EbwWMpTv-Q'
+instagram: 'https://www.instagram.com/spacedrifterband/'
+facebook: 'https://www.facebook.com/spacedrifterband'
 imageOffset: '10%'
 published: true
 ---

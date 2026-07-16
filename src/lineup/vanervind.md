@@ -2,6 +2,7 @@
 title: Vänervind
 spotify: 'https://open.spotify.com/artist/1MrcB01h5JOC0xEodbrFdY?si=MA53nDZVQ_CkOxmRUkkTFQ'
 instagram: 'https://www.instagram.com/vanervind_bandet/'
+facebook: 'https://www.facebook.com/vanervind'
 imageOffset: 0;
 published: true
 ---

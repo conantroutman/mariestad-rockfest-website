@@ -2,6 +2,7 @@
 title: Browsing Collection
 spotify: 'https://open.spotify.com/artist/4ryoVY6Gmwve1PXyNtbDSC?si=r6c98ighTlmB0JaUir3KeQ'
 instagram: 'https://www.instagram.com/browsingcollection/'
+facebook: 'https://www.facebook.com/BrowsingCollection'
 imageOffset: '30%'
 published: true
 ---

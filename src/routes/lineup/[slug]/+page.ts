@@ -1,7 +1,7 @@
 import type { LineupArtist } from '$lib/types';
 import { redirect } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { Component } from 'svelte';
+import type { Snippet } from 'svelte';
 
 export const load: PageLoad = async ({ params }) => {
 	const { slug } = params;
@@ -17,7 +17,7 @@ export const load: PageLoad = async ({ params }) => {
 
 async function getMarkdownFile(
 	slug: string
-): Promise<{ metadata: LineupArtist; content: Component } | null> {
+): Promise<{ metadata: LineupArtist; content: Snippet } | null> {
 	try {
 		const file = await import(`../../../lineup/${slug}.md`);
 
@@ -26,7 +26,7 @@ async function getMarkdownFile(
 		}
 
 		const metadata = { ...(file.metadata as LineupArtist), slug };
-		const content = file.default as Component;
+		const content = file.default as Snippet;
 
 		return { metadata, content };
 	} catch (error) {

@@ -1,5 +1,6 @@
 ---
 title: Rymdsallad
+instagram: 'https://www.instagram.com/rymdsallad/'
 imageOffset: '10%'
 published: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: Steelflight
 spotify: 'https://open.spotify.com/artist/3MeeXjBijuFWmuuyETq8ax?si=QFxNXopzQz-USX43LA7eqA'
+instagram: 'https://www.instagram.com/steelflight_band/'
 published: true
 ---
 

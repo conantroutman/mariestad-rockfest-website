@@ -1,6 +1,8 @@
 ---
 title: Dråpslag
 spotify: 'https://open.spotify.com/artist/6uxUwClwuUykZf67B6Pv2o?si=96GKb8sbTzKkAN0SSq_HOA'
+instagram: 'https://www.instagram.com/drapslag/'
+facebook: 'https://www.facebook.com/profile.php?id=100072164583343'
 imageOffset: '35%'
 published: true
 ---

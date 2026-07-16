@@ -1,6 +1,7 @@
 ---
 title: Johnny Stålarz & Vilda Väzten
 spotify: 'https://open.spotify.com/artist/63BrvlgwR57SkFxcgOosir?si=gpYrhZQdQx2EHqO1oZCopg'
+instagram: 'https://www.instagram.com/johnnyzband/'
 published: true
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: Ättestupan
 spotify: 'https://open.spotify.com/artist/3wlXiOPLm71MY6gwwocnGV?si=6ibcKmfPSyWAQwRCFLfr4g'
+instagram: 'https://www.instagram.com/attestupanband/'
+facebook: 'https://www.facebook.com/profile.php?id=61578651951585'
 imageOffset: '20%'
 published: true
 ---

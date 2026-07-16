@@ -2,6 +2,7 @@
 title: Thermality
 spotify: 'https://open.spotify.com/artist/3AF9jYNoKu6AkB1Jkr7qjn?si=NkWgJCR6TDO72Op3x51ykQ'
 instagram: 'https://www.instagram.com/thermality_official/'
+facebook: 'https://www.facebook.com/thermality'
 published: true
 ---
 

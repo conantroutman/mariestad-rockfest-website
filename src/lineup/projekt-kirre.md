@@ -1,6 +1,8 @@
 ---
 title: Projekt KIRRE
 spotify: 'https://open.spotify.com/artist/0YQBLHjVceO4rkAeZWR1FZ?si=slLzZtPOSmm7J8VPLRpZSQ'
+instagram: 'https://www.instagram.com/projektkirre/'
+facebook: 'https://www.facebook.com/profile.php?id=61567686576883'
 imageOffset: '45%'
 published: true
 ---

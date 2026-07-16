@@ -1,6 +1,7 @@
 ---
 title: Badmor
 spotify: 'https://open.spotify.com/artist/5UAKJrunsAYTtOi8e1a4mE?si=DDR3itJkSfeYbmkU-beHvQ'
+instagram: 'https://www.instagram.com/itsbadmor/'
 published: true
 ---
 
