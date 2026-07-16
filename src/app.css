@@ -48,6 +48,11 @@ html {
 	text-size-adjust: none;
 }
 
+body {
+	font-family: var(--font-family-avant-garde);
+	font-weight: 300;
+}
+
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
@@ -171,4 +176,24 @@ h3 {
 
 .heading-5 {
 	font-size: clamp(1rem, 3cqw, 1.5rem);
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
 }

@@ -1,0 +1,10 @@
+<iframe
+	title="Karta"
+	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.0800975660495!2d13.82822276575599!3d58.714971271078596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465b1327af73c839%3A0x2b84223a682a2a1c!2sNygatan%2033%2C%20542%2039%20Mariestad!5e0!3m2!1sen!2sse!4v1784226024048!5m2!1sen!2sse"
+	width="100%"
+	height="450"
+	style="border:0;"
+	allowfullscreen={false}
+	loading="lazy"
+	referrerpolicy="strict-origin-when-cross-origin"
+></iframe>

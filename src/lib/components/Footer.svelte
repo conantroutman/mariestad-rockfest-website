@@ -3,6 +3,7 @@
 	import LogoFacebook from './logos/LogoFacebook.svelte';
 	import LogoInstagram from './logos/LogoInstagram.svelte';
 	import Logo from '$lib/assets/logo.png?enhanced';
+	import { FACEBOOK_URL, INSTAGRAM_URL } from '$lib/constants';
 </script>
 
 <footer>
@@ -31,22 +32,12 @@
 				<h4>Följ oss på sociala medier</h4>
 				<ul class="socials">
 					<li>
-						<a
-							href="https://instagram.com/mariestad_rockfest"
-							target="_blank"
-							rel="noreferrer"
-							title="Instagram"
-						>
+						<a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" title="Instagram">
 							<LogoInstagram />
 						</a>
 					</li>
 					<li>
-						<a
-							href="https://www.facebook.com/mariestadrockfest"
-							target="_blank"
-							rel="noreferrer"
-							title="Facebook"
-						>
+						<a href={FACEBOOK_URL} target="_blank" rel="noreferrer" title="Facebook">
 							<LogoFacebook />
 						</a>
 					</li>
@@ -84,7 +75,11 @@
 	}
 
 	.socials a {
+		display: block;
 		transition: opacity 200ms ease;
+		height: 2rem;
+		width: 2rem;
+		line-height: 2rem;
 	}
 
 	.socials a:hover {
@@ -92,7 +87,8 @@
 	}
 
 	h4 {
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
 	}
 
 	address {

@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { TICKETS_URL } from '$lib/constants';
+	import MariestadRockfestLogo from './MariestadRockfestLogo.svelte';
+	import Navigation from './Navigation.svelte';
 </script>
 
 <header>
-	<h1 class="wordmark"><a href="/">Mariestad Rockfest</a></h1>
-	<a href={TICKETS_URL} target="_blank" class="tickets">Biljetter</a>
+	<a href="/" class="logo" aria-label="Home"><MariestadRockfestLogo /></a>
+	<Navigation />
 </header>
 
 <style>
 	header {
+		height: var(--header-height);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -22,15 +24,9 @@
 		left: 0;
 	}
 
-	.wordmark {
-		font-family: casserole-flare;
-		text-transform: uppercase;
-		letter-spacing: 5%;
-		text-wrap: nowrap;
-	}
-
-	.wordmark a {
-		text-decoration: none;
+	.logo {
+		color: white;
+		height: 2rem;
 	}
 
 	.tickets {

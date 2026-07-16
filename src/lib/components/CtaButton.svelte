@@ -1,8 +1,16 @@
-<script>
-	let { href, children } = $props();
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	type Props = {
+		href: string;
+		target?: string;
+		children: Snippet;
+	};
+
+	let { href, children, target = '_blank' }: Props = $props();
 </script>
 
-<a {href} target="_blank">{@render children()}</a>
+<a {href} {target}>{@render children()}</a>
 
 <style>
 	a {
@@ -19,6 +27,7 @@
 		transition-timing-function: ease;
 		text-decoration: none;
 		backdrop-filter: blur(10px);
+		font-weight: 500;
 	}
 
 	a:hover {

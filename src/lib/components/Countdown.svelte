@@ -77,7 +77,7 @@
 		gap: 2rem;
 		text-align: center;
 		width: fit-content;
-		margin: auto;
+		margin: 0 auto;
 		font-family: var(--font-family-casserole);
 		text-transform: uppercase;
 	}

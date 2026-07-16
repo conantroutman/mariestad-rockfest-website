@@ -6,29 +6,15 @@
 	import LogoStudieframjandet from '$lib/components/logos/LogoStudieframjandet.svelte';
 	import LogoVGR from '$lib/components/logos/LogoVGR.svelte';
 	import HeroImage from '$lib/assets/hero.png?enhanced';
-	import LogoImage from '$lib/assets/logo.png?enhanced';
 	import { DATE, TICKETS_URL } from '$lib/constants';
 	import LogoSkyltotryck from '$lib/components/logos/LogoSkyltotryck.svelte';
 	import LogoMariestadKommun from '$lib/components/logos/LogoMariestadKommun.svelte';
 	import PageHero from '$lib/components/PageHero.svelte';
 	import Countdown from '$lib/components/Countdown.svelte';
+	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
+	import type { PageProps } from './$types';
 
-	const bands = [
-		'Badmor',
-		'Browsing Collection',
-		'Dråpslag',
-		'Johnny Stålarz',
-		'Kaliber',
-		'Projekt Kirre',
-		'Rymdsallad',
-		'Secret Gallery',
-		'Spacedrifter',
-		'Steelflight',
-		'Thermality',
-		'When',
-		'Vänervind',
-		'Ättestupan'
-	];
+	const { data }: PageProps = $props();
 
 	const date = new Date('2026-09-06:15:30:00');
 
@@ -43,7 +29,9 @@
 
 <PageHero imageSrc={HeroImage} imageAlt="Ett band spelar på Jubileumsteatern">
 	<div>
-		<enhanced:img src={LogoImage} alt="Mariestad Rockfest" class="hero-logo" />
+		<div class="hero-logo">
+			<MariestadRockfestLogo />
+		</div>
 		<time class="hero-date" datetime={DATE.toISOString()}>
 			{DATE.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' })}
 		</time>
@@ -51,7 +39,9 @@
 	{#if showCountdown}
 		<Countdown {date} />
 	{/if}
-	<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+	<div class="cta">
+		<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
+	</div>
 </PageHero>
 
 <section>
@@ -72,14 +62,15 @@
 	</Container>
 </section>
 
-<section>
+<section style:background-color="#0d0d0d">
 	<Container>
-		<h2 class="heading-2">Klara band</h2>
+		<h2 class="heading-2">Lineup</h2>
 		<ul class="bands">
-			{#each bands as band (band)}
-				<li>{band}</li>
+			{#each data.lineup as band (band)}
+				<li>{band.title}</li>
 			{/each}
 		</ul>
+		<CtaButton href="/lineup" target="_self">Läs mer om banden</CtaButton>
 	</Container>
 </section>
 
@@ -103,21 +94,12 @@
 		padding: 4rem 0;
 	}
 
-	.hero {
-		width: 100%;
-		height: 600px;
-		position: relative;
-		overflow: hidden;
-	}
-
 	:global(.hero > picture) {
 		height: 100%;
 	}
 
 	.hero-logo {
-		object-fit: contain;
-		height: fit-content;
-		width: 600px;
+		max-width: 600px;
 	}
 
 	.hero-date {
@@ -129,6 +111,11 @@
 		display: block;
 		letter-spacing: 20%;
 		line-height: 1;
+		margin-top: 0.5rem;
+	}
+
+	.cta {
+		margin-top: 3rem;
 	}
 
 	@media (max-width: 680px) {
@@ -161,13 +148,15 @@
 	}
 
 	.bands {
-		color: white;
 		list-style: none;
 		padding: 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 0.5rem;
-		margin-top: 2rem;
+		margin: 3rem 0;
+		font-family: var(--font-family-casserole);
+		text-transform: uppercase;
+		font-size: 1.5rem;
 	}
 
 	@media (max-width: 680px) {
