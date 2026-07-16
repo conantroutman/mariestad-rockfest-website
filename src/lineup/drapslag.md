@@ -2,7 +2,7 @@
 title: Dråpslag
 spotify: 'https://open.spotify.com/artist/6uxUwClwuUykZf67B6Pv2o?si=96GKb8sbTzKkAN0SSq_HOA'
 imageOffset: '35%'
-published: false
+published: true
 ---
 
 Dråpslag – say no more! Sedan starten i Mariestad 2022 har bandet börjat sätta tydliga avtryck på den svenska undergroundscenen. Med rötterna stadigt planterade i punk och Oi! levererar de låtar som rör sig mellan samhällskritik, lokalpatriotism och vardaglig misär, allt med attityd, energi och allsångspotential.

@@ -1,7 +1,7 @@
 ---
 title: Secret Gallery
 spotify: 'https://open.spotify.com/artist/4yyBmwRIuhAgqISvKSJa4p?si=3VK3Ky8USKifV-5fWyXc7A'
-published: false
+published: true
 ---
 
 Ytterligare en kär återkomst på Karlsholme blir Skövdebandet Secret Gallery. Bandet bildades ursprungligen inför en Halloween-spelning i replokalen, men utvecklades snabbt till något större. När de med kort varsel hoppade in och öppnade Mariestad Rockfest förra året blev det en rejält hyllad spelning, och vi är därför mycket glada att välkomna dem tillbaka.

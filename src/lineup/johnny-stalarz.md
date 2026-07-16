@@ -1,7 +1,7 @@
 ---
 title: Johnny Stålarz & Vilda Väzten
 spotify: 'https://open.spotify.com/artist/63BrvlgwR57SkFxcgOosir?si=gpYrhZQdQx2EHqO1oZCopg'
-published: false
+published: true
 ---
 
 Johnny Stålarz och Vilda Väzten började som ett spex på en julshow men det blev snabbt mer än så. Succén var ett faktum och bandet fortsatte spela.
