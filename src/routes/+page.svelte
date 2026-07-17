@@ -13,6 +13,7 @@
 	import Countdown from '$lib/components/Countdown.svelte';
 	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
 	import type { PageProps } from './$types';
+	import Poster from '$lib/components/Poster.svelte';
 
 	const { data }: PageProps = $props();
 
@@ -59,6 +60,7 @@
 				dos nostalgi!
 			</p>
 		</div>
+		<Poster />
 	</Container>
 </section>
 
@@ -92,6 +94,12 @@
 	section {
 		text-align: center;
 		padding: 4rem 0;
+	}
+
+	@media (max-width: 680px) {
+		section {
+			padding: 3rem 0;
+		}
 	}
 
 	:global(.hero > picture) {
@@ -145,6 +153,7 @@
 	.info {
 		max-width: 70ch;
 		margin: auto;
+		margin-bottom: 2rem;
 	}
 
 	.bands {
