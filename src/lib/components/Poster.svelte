@@ -1,5 +1,5 @@
 <script lang="ts">
-	import poster from '$lib/assets/poster.png?enhanced&format=webp';
+	import poster from '$lib/assets/poster.png?enhanced&format=webp&w=1080&h=1350&aspect=4:5';
 	import placeholder from '$lib/assets/poster.png?format=webp&inline&w=16&blur=2';
 </script>
 
