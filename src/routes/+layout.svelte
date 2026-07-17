@@ -3,12 +3,15 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { onMount } from 'svelte';
+	import { init } from '@plausible-analytics/tracker';
 	import '../app.css';
 
 	let { children } = $props();
 
 	onMount(() => {
-		console.log('Created by John Söderberg');
+		init({
+			domain: 'mariestadrockfest.se'
+		});
 	});
 </script>
 
