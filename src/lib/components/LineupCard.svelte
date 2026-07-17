@@ -26,9 +26,24 @@
 		imageElement.dataset.loaded = 'true';
 	};
 
-	const imageModule = Object.entries(imageModules).find(([_path]) =>
-		_path.includes(`/src/lineup/images/${artist.slug}.`)
-	)?.[1];
+	function getImageModule() {
+		try {
+			const module = Object.entries(imageModules).find(([_path]) =>
+				_path.includes(`/src/lineup/images/${artist.slug}.`)
+			)?.[1];
+
+			if (typeof module === 'undefined') {
+				throw new Error('Image module undefined');
+			}
+
+			return module;
+		} catch (error) {
+			console.error(error);
+			return UnknownImageModule;
+		}
+	}
+
+	const imageModule = getImageModule();
 </script>
 
 <a href={`/lineup/${artist.slug}`}>
@@ -36,17 +51,6 @@
 		{#if imageModule}
 			<enhanced:img
 				src={imageModule}
-				alt={artist.title}
-				class="image"
-				style:--image-offset={artist.imageOffset}
-				loading="lazy"
-				decoding="async"
-				data-loaded="false"
-				onload={handleImageLoad}
-			/>
-		{:else}
-			<enhanced:img
-				src={UnknownImageModule}
 				alt={artist.title}
 				class="image"
 				style:--image-offset={artist.imageOffset}
