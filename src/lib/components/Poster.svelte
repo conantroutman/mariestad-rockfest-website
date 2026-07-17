@@ -17,7 +17,7 @@
 		aspect-ratio: 4 / 5;
 		height: 100%;
 		max-height: 800px;
-		width: 100%;
+		width: fit-content;
 		object-fit: contain;
 		margin: 0 auto;
 		background-size: cover;
