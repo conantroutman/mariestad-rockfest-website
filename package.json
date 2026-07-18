@@ -35,6 +35,7 @@
 		"svelte": "^5.55.2",
 		"svelte-check": "^4.4.6",
 		"svelte-confetti": "^2.3.2",
+		"svelte-sitemap": "^4.0.4",
 		"typescript": "^6.0.2",
 		"typescript-eslint": "^8.58.1",
 		"vite": "^8.0.7",
