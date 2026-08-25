@@ -28,29 +28,4 @@
 		color: white;
 		height: 2rem;
 	}
-
-	.tickets {
-		display: block;
-		text-decoration: none;
-		outline: 1px solid white;
-		padding: 0.25rem 1rem;
-		width: fit-content;
-		justify-self: end;
-		transition-property:
-			transform background-color,
-			color;
-		transition-duration: 200ms;
-		transition-timing-function: ease;
-	}
-
-	.tickets:hover {
-		background-color: white;
-		color: black;
-	}
-
-	@media (max-width: 680px) {
-		.wordmark {
-			font-size: 1.25rem;
-		}
-	}
 </style>

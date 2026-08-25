@@ -38,39 +38,45 @@
 	});
 </script>
 
-{#if isMounted}
-	{#if timeLeft.totalSeconds > 0}
-		<div class="container">
-			<div class="segment">
-				<div class="value">{timeLeft.days}</div>
-				<div class="label">Dagar</div>
-			</div>
-			<div class="segment">
-				<div class="value">
-					{timeLeft.hours}
+<div class="wrapper">
+	{#if isMounted}
+		{#if timeLeft.totalSeconds > 0}
+			<div class="container">
+				<div class="segment">
+					<div class="value">{timeLeft.days}</div>
+					<div class="label">Dagar</div>
 				</div>
-				<div class="label">Timmar</div>
+				<div class="segment">
+					<div class="value">
+						{timeLeft.hours}
+					</div>
+					<div class="label">Timmar</div>
+				</div>
+				<div class="segment">
+					<div class="value">{timeLeft.minutes}</div>
+					<div class="label">Minuter</div>
+				</div>
+				<div class="segment">
+					<div class="value">{timeLeft.seconds}</div>
+					<div class="label">Sekunder</div>
+				</div>
 			</div>
-			<div class="segment">
-				<div class="value">{timeLeft.minutes}</div>
-				<div class="label">Minuter</div>
+		{:else}
+			<div class="countdown-finished">
+				<div class="confetti">
+					<Confetti x={[-3, 3]} y={[0.25, 0.5]} />
+				</div>
+				<div>Festivalen har börjat!</div>
 			</div>
-			<div class="segment">
-				<div class="value">{timeLeft.seconds}</div>
-				<div class="label">Sekunder</div>
-			</div>
-		</div>
-	{:else}
-		<div class="countdown-finished">
-			<div class="confetti">
-				<Confetti x={[-3, 3]} y={[0.25, 0.5]} />
-			</div>
-			<div>Festivalen har börjat!</div>
-		</div>
+		{/if}
 	{/if}
-{/if}
+</div>
 
 <style>
+	.wrapper {
+		height: 152px;
+	}
+
 	.container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;

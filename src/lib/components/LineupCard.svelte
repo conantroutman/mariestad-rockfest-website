@@ -46,7 +46,7 @@
 	const imageModule = getImageModule();
 </script>
 
-<a href={`/lineup/${artist.slug}`}>
+<a href={`/lineup/${artist.slug}`} aria-label={`Läs mer om ${artist.title}`}>
 	<div class="image-container">
 		{#if imageModule}
 			<enhanced:img
@@ -62,6 +62,7 @@
 		{/if}
 	</div>
 	<div class="name">{artist.title}</div>
+	<div class="cta">Läs Mer</div>
 </a>
 
 <style>
@@ -72,6 +73,7 @@
 		gap: 0.5rem;
 		text-decoration: none;
 		min-height: 200px;
+		box-sizing: border-box;
 	}
 
 	.image-container {
@@ -107,5 +109,22 @@
 		font-family: var(--font-family-casserole);
 		text-transform: uppercase;
 		font-size: var(--font-scale-400);
+	}
+
+	.cta {
+		display: flex;
+		justify-content: center;
+		border: 2px solid white;
+		padding: 0.5rem;
+		text-transform: uppercase;
+		transition:
+			background-color 200ms ease-in-out,
+			color 200ms ease-in-out;
+	}
+
+	a:hover .cta,
+	a:focus .cta {
+		background-color: white;
+		color: black;
 	}
 </style>

@@ -2,14 +2,10 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { onMount } from 'svelte';
+	import Plausible from '$lib/components/Plausible.svelte';
 	import '../app.css';
 
 	let { children } = $props();
-
-	onMount(() => {
-		console.log('Created by John Söderberg');
-	});
 </script>
 
 <svelte:head>
@@ -21,6 +17,8 @@
 		content="Mariestad Rockfest är en gigantisk musikfest där vi firar Mariestads Rockscen! Festivalen äger rum den 5:e September 2026 i Folkets Park på Karlsholme."
 	/>
 </svelte:head>
+
+<Plausible />
 
 <Header />
 <main>
