@@ -59,6 +59,7 @@
 				Samla dina vänner, dra till Karlsholme och njut av grymt bra musik, hög energi och en rejäl
 				dos nostalgi!
 			</p>
+			<p>Allt överskott går till Läkare Utan Gränser.</p>
 		</div>
 		<Poster />
 	</Container>
