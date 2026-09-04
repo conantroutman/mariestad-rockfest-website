@@ -14,14 +14,13 @@
 	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
 	import type { PageProps } from './$types';
 	import Poster from '$lib/components/Poster.svelte';
+	import Sponsors from '$lib/components/Sponsors.svelte';
 
 	const { data }: PageProps = $props();
 
-	const date = new Date('2026-09-06:15:30:00');
-
 	const TIME_24_HOURS = 86400000;
 
-	const showCountdown = Date.now() > date.getMilliseconds() + TIME_24_HOURS;
+	const showCountdown = Date.now() > DATE.getMilliseconds() + TIME_24_HOURS;
 </script>
 
 <svelte:head>
@@ -38,12 +37,16 @@
 		</time>
 	</div>
 	{#if showCountdown}
-		<Countdown {date} />
+		<Countdown date={DATE} />
 	{/if}
 	<div class="cta">
 		<CtaButton href={TICKETS_URL}>Köp biljetter här</CtaButton>
 	</div>
 </PageHero>
+
+<Container>
+	<Sponsors />
+</Container>
 
 <section>
 	<Container>
