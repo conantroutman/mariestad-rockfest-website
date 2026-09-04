@@ -14,7 +14,6 @@
 	import MariestadRockfestLogo from '$lib/components/MariestadRockfestLogo.svelte';
 	import type { PageProps } from './$types';
 	import Poster from '$lib/components/Poster.svelte';
-	import Sponsors from '$lib/components/Sponsors.svelte';
 
 	const { data }: PageProps = $props();
 
