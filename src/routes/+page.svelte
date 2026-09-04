@@ -44,10 +44,6 @@
 	</div>
 </PageHero>
 
-<Container>
-	<Sponsors />
-</Container>
-
 <section>
 	<Container>
 		<h1 class="heading-1">Välkommen till Mariestad Rockfest</h1>
